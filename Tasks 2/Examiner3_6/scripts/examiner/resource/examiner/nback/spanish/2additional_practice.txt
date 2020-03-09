@@ -1,0 +1,8 @@
+﻿Practiquemos con algunos cuadrados más.
+
+Recuerde cada cuadrado y compárelo con el que 
+apareció DOS cuadrados atrás. 
+
+Responda lo más rápido posible sin cometer errores.
+
+Presione la BARRA ESPACIADORA para comenzar.

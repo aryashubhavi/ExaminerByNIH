@@ -1,0 +1,7 @@
+﻿¿Esta ubicación coincide con la 
+que apareció DOS cuadrados atrás?
+
+Si su respuesta es SÍ, presione
+la tecla IZQUIERDA.
+Si su respuesta es NO, presione
+la tecla DERECHA.

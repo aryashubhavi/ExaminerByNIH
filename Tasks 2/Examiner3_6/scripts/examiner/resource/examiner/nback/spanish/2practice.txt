@@ -1,0 +1,13 @@
+﻿Practiquemos con algunos cuadrados más. 
+
+Ahora cada cuadrado aparecerá durante un período más corto. 
+
+Recuerde comparar cada cuadrado con el que 
+apareció DOS cuadrados atrás. 
+
+Comience a responder a partir del tercer cuadrado. 
+
+Responda lo más rápido posible sin cometer errores. 
+
+Presione la BARRA ESPACIADORA para comenzar.
+

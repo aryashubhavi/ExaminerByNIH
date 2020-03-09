@@ -1,0 +1,10 @@
+﻿Ahora proseguiremos con la segunda parte de esta tarea.
+
+Una vez más, verá una serie de cuadrados blancos en la pantalla
+y debe recordar la ubicación de cada cuadrado cuando aparezca. 
+
+Esta vez, comparará cada cuadrado con la ubicación del 
+cuadrado que apareció DOS antes que él. 
+
+Presione la BARRA ESPACIADORA para continuar.
+

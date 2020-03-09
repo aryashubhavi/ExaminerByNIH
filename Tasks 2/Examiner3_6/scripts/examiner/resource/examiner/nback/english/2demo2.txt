@@ -1,0 +1,10 @@
+﻿If a square matches the location of the square TWO before it, 
+press the LEFT button for YES. 
+
+If a square does not match the location of the square TWO before it, 
+press the RIGHT button for NO.
+
+Start responding with the third square. 
+
+We’ll try some practice trials first. 
+Press the SPACEBAR to begin.

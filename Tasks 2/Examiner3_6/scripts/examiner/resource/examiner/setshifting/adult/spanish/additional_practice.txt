@@ -1,0 +1,20 @@
+﻿Ha completado la prueba de práctica.
+Hagamos otra prueba de práctica. Las instrucciones son las mismas. 
+
+Al momento de hacer la asociación según el COLOR, presione el
+ botón izquierdo para rojo y el botón derecho para azul.
+							
+IZQUIERDO = ROJO						 DERECHO = AZUL
+	
+		
+		
+		
+				
+
+Al momento de hacer la asociación según la FORMA, presione el 
+botón izquierdo para triángulo y el botón derecho para rectángulo. 
+	
+IZQUIERDO = TRIÁNGULO				DERECHO = RECTÁNGULO
+	
+Presione la BARRA ESPACIADORA para comenzar. 
+

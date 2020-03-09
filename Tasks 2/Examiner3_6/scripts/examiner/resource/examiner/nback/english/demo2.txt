@@ -1,0 +1,12 @@
+﻿If a square matches the location of the previous square, 
+Press the LEFT button for YES.
+
+If a square does not match the location of the previous square,
+Press the RIGHT button for NO. 
+
+In between each square, a number will appear in the 
+middle of the screen. Say that number out loud.
+
+We'll try some practice trials first.
+
+Press the SPACEBAR to begin.

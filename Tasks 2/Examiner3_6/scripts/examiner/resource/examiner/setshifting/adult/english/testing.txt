@@ -1,0 +1,23 @@
+﻿Now let's move on to the task, the instructions are the same but
+you will no longer receive feedback after your responses.
+		
+When you have to match by COLOR, you should push the LEFT 
+button for RED and the RIGHT button for BLUE.
+
+When you have to match by SHAPE, you should push the LEFT 
+button for TRIANGLE and the RIGHT button for RECTANGLE. 
+		
+		
+		
+		
+		
+		
+Try to respond quickly and accurately, but if you make
+a mistake just keep going.
+					
+Press the SPACEBAR when you are ready to begin. 
+		
+		
+		
+		
+		 	

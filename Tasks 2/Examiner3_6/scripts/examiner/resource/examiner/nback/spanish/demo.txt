@@ -1,0 +1,8 @@
+﻿
+Verá que aparece una serie de cuadrados blancos en la pantalla.
+
+Recuerde la ubicación de cada cuadrado cuando aparezca. 
+	
+La comparará con la ubicación del siguiente cuadrado que vea. 
+
+Presione la BARRA ESPACIADORA para continuar.

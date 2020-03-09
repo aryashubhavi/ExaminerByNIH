@@ -1,0 +1,13 @@
+﻿You have completed the practice trial.
+Let's move on to the task.
+		
+The instructions are the same.
+You will be presented with different objects on the screen.
+If this LEFT ARROW is presented on the screen,
+press the left arrow key.
+If any other object is presented, do not press any key.
+
+Respond as quickly as you can without making mistakes.
+If you do make a mistake just keep going.
+		
+Press the SPACEBAR when you are ready to begin.

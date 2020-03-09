@@ -1,0 +1,23 @@
+Aparecerán diferentes objetos en la pantalla.
+Si esta ESTRELLA DE 5 PUNTAS aparece en la pantalla, 
+presione la tecla de flecha hacia la izquierda.
+
+Si aparece cualquier otra figura, 
+no presione ninguna tecla.
+
+
+
+
+
+
+
+
+
+Responda lo más rápido posible sin cometer errores. 
+Si se equivoca, simplemente continúe.
+
+Comenzaremos con algunas pruebas de práctica.
+Presione la BARRA ESPACIADORA para comenzar.
+
+
+

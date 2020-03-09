@@ -1,0 +1,25 @@
+﻿Esta es una tarea de asociación. 
+Observe la imagen que se muestra a la mitad de la pantalla. 
+
+Si escucha la palabra FORMA deberá asociar la imagen 
+que se muestra a la mitad de la pantalla con la imagen 
+que se muestra en la esquina que tenga la misma FORMA.
+
+Si escucha la palabra COLOR deberá asociar la imagen 
+que se muestra a la mitad de la pantalla con la imagen 
+que se muestra en la esquina que tenga el mismo COLOR.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

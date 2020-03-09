@@ -1,0 +1,10 @@
+﻿Now we will move on to the second part of this task.
+
+Once again, you will see a series of white squares 
+appear on the screen and remember the location 
+of each square when it appears. 
+
+This time, you will compare each square to the location 
+of the square TWO before it. 
+
+Press the SPACEBAR to continue.

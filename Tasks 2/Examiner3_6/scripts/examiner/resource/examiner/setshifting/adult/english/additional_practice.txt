@@ -1,0 +1,20 @@
+﻿You have completed the practice trial.
+Let's do another practice trial. The instructions are the same. 
+
+When you have to match by COLOR, you should push the 
+left button for red and the right button for blue.
+							
+LEFT = RED						  RIGHT = BLUE
+	
+		
+		
+		
+				
+When you have to match by SHAPE, you should push the left
+button for triangle and the right button for rectangle. 
+	
+LEFT = TRIANGLE				RIGHT = RECTANGLE
+	
+Press the SPACEBAR to begin. 
+		
+				

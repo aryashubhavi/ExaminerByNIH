@@ -1,0 +1,10 @@
+﻿Si un cuadrado corresponde con la ubicación del cuadrado que
+apareció DOS antes que él, presione el botón IZQUIERDO para SÍ. 
+
+Si un cuadrado no corresponde con la ubicación del cuadrado que
+apareció DOS antes que él, presione el botón DERECHO para NO.
+
+Comience a responder a partir del tercer cuadrado. 
+
+Primero haremos algunas pruebas de práctica. 
+Presione la BARRA ESPACIADORA para comenzar.

@@ -1,0 +1,5 @@
+﻿Is this location the same 
+as the one just before?
+
+If YES, press the LEFT KEY.
+If NO, press the RIGHT KEY.

@@ -1,0 +1,13 @@
+﻿Ha completado las pruebas de práctica.
+Continuemos con la tarea. Las instrucciones son las mismas.
+
+Cuente y recuerde la cantidad de CÍRCULOS AZULES 
+que vea en cada pantalla.
+
+Cuente los CÍRCULOS AZULES en voz alta, uno por vez, 
+y luego repita el total final en voz alta.
+Cuando en la pantalla aparezcan los signos de interrogación, 
+repita las cantidades finales que haya contado.
+
+Presione la BARRA ESPACIADORA cuando esté listo para empezar.
+

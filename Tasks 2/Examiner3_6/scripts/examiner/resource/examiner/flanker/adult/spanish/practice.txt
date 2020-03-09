@@ -1,0 +1,22 @@
+
+
+La pantalla mostrará una serie de flechas que señalan 
+hacia la izquierda o hacia la derecha.  Por ejemplo:
+                                             
+			
+			
+O bien
+									
+									
+   	
+Presione el botón IZQUIERDO si la flecha CENTRAL 
+señala hacia la izquierda.
+Presione el botón DERECHO si la flecha CENTRAL 
+señala hacia la derecha.
+
+Intente responder tan rápido y preciso como pueda.
+Intente mantener su atención concentrada en la cruz (“+”) 
+en el centro de la pantalla.
+
+Primero haremos una prueba de práctica. 
+Presione la BARRA ESPACIADORA para comenzar.

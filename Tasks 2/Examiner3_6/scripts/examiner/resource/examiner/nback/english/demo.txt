@@ -1,0 +1,8 @@
+﻿
+You will see a series of white squares appear on the screen.
+
+Remember the location of each square when it appears. 
+	
+You will compare it to the location of the next square you see. 
+
+Press the SPACEBAR to continue.

@@ -1,0 +1,3 @@
+﻿Recuerde la ubicación de este cuadrado
+para poder compararla con la ubicación
+del siguiente cuadrado que vea.

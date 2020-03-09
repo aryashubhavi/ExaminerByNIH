@@ -1,0 +1,16 @@
+Ha completado la prueba de práctica.
+Prosigamos con la tarea.
+		
+Las instrucciones son las mismas.
+Aparecerán diferentes figuras en la pantalla.
+Si la ESTRELLA DE 5 PUNTAS aparece en la pantalla, 
+presione la tecla de flecha hacia la izquierda.
+Si aparece cualquier otra figura, no presione ninguna tecla.
+
+Responda lo más rápido posible sin cometer errores.
+Si se equivoca, simplemente continúe.
+		
+Presione la BARRA ESPACIADORA cuando esté listo para empezar.	
+
+
+	

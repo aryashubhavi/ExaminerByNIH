@@ -1,0 +1,10 @@
+﻿Se le mostrará una serie de pantallas que contienen 
+círculos azules, círculos verdes y cuadrados azules.
+
+Cuente y recuerde la cantidad de CÍRCULOS AZULES 
+que vea en cada pantalla. 
+
+Cuente los CÍRCULOS AZULES en voz alta, uno por vez,
+y luego repita el total final en voz alta en forma inmediata.
+
+Esto le indicará al examinador que ha terminado de contar. 

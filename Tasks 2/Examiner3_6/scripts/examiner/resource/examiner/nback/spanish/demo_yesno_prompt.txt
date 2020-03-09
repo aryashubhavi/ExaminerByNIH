@@ -1,0 +1,7 @@
+﻿¿Está en la misma 
+ubicación que el anterior?
+
+Si su respuesta es SÍ, presione
+la TECLA IZQUIERDA.
+Si su respuesta es NO, presione
+la TECLA DERECHA.

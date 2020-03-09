@@ -1,0 +1,15 @@
+﻿Realizaremos una tarea para observarle 
+los movimientos de los ojos. 
+
+Verá un punto en el centro de la pantalla.
+
+Mueva los ojos en la dirección que se mueve el punto, que 
+puede ser hacia la izquierda o hacia la derecha de la pantalla. 
+
+Después de ver en dirección al punto, 
+regrese los ojos al centro de la pantalla. 
+
+No mueva la cabeza, sólo los ojos.
+
+Presione la BARRA ESPACIADORA para continuar.
+

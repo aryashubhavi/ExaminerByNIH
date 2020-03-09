@@ -1,0 +1,2 @@
+task_name,task_version,task_versionDate,task_form,task_ageCohort,task_language,site_id,subject_id,session_num,session_date,session_start,initials,machine_id,response_device,total_trials,total_corr,total_errors,target_corr,target_errors,target_mean,target_median,target_stdev,nontarget_corr,nontarget_errors,performance_errors
+CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:30,sa,Machine_ID,keyboard,100,87,13,72,8,0.4978,0.4697,0.1666,15,5,0

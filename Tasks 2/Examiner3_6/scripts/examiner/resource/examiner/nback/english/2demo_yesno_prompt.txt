@@ -1,0 +1,5 @@
+﻿Does this location match 
+the location TWO before?
+
+If YES, press the LEFT key.
+If NO, press the RIGHT key.

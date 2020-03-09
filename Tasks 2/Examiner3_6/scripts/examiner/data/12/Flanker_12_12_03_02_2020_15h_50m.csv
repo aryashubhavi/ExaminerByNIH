@@ -1,0 +1,9 @@
+task_name,task_version,task_versionDate,task_form,task_ageCohort,task_language,site_id,subject_id,session_num,session_date,session_start,initials,machine_id,response_device,block_name,trial_congruent,trial_arrows,trial_upDown,trial_corrResp,trial_fixation,resp_value,resp_corr,resp_rt,task_time
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,1,rrrrr,down,right,2.037,right,1,2.7389956889785827,38.04455052601406
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,1,rrrrr,up,right,2.233,right,1,1.4393228589980862,44.18024691802566
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,0,llrll,up,right,1.688,right,1,2.883404211019399,51.18687773600686
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,1,lllll,up,left,2.857,left,1,0.8633615499893201,57.429599909024546
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,0,rrlrr,up,left,1.171,left,1,3.705202313986141,64.76210967299994
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,0,llrll,down,right,1.855,right,1,1.3246991149894893,70.36542584002018
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,1,lllll,down,left,2.412,left,1,1.1983978769970127,76.40425501100253
+Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,03/02/2020,15:50,sa,Machine_ID,keyboard,firstPracticeBlock,0,rrlrr,down,left,1.5470000000000002,left,1,1.6515533520055468,82.02284584601875

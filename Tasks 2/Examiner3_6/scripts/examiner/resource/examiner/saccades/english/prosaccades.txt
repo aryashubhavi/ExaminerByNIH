@@ -1,0 +1,13 @@
+﻿We are going to do a task to watch  your eye movements. 
+
+You will see a dot in the center of the screen.
+
+Move your eyes in the direction the dot moves, which will
+be either to the left side or to the right side of the screen. 
+
+After you have looked in the direction of the dot, 
+return your eyes to the center of the screen. 
+
+Do not move your head, just your eyes.
+
+Press the SPACEBAR to continue.

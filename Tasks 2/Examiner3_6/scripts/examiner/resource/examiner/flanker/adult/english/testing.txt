@@ -1,0 +1,10 @@
+﻿	Now we'll move on to the task, the instructions are the same
+	except you will no longer receive feedback after your responses.
+
+Press the LEFT button if the CENTER arrow points to the left.
+Press the RIGHT button if the CENTER arrow points to the right.
+
+	Remember to keep your focus on the center cross ("+") and try to 
+	respond as quickly as possible without making mistakes. 
+
+		Press the SPACEBAR when you are ready to begin.

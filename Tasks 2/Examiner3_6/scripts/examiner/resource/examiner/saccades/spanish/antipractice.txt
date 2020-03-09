@@ -1,0 +1,15 @@
+﻿Ahora proseguiremos con la segunda parte de esta tarea de 
+movimiento ocular. Una vez más, verá un punto en el 
+centro de la pantalla. 
+
+Esta vez quiero que use los ojos para mirar hacia la 
+dirección CONTRARIA a la que se mueve el punto.
+
+No mueva la cabeza, sólo los ojos. 
+
+Después de mirar hacia el lado contrario al lado en que 
+está el punto, regrese los ojos para mirar el punto en el 
+centro de la pantalla. 
+
+Presione la BARRA ESPACIADORA para comenzar 
+la prueba de práctica.

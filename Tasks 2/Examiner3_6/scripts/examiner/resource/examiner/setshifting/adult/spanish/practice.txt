@@ -1,0 +1,16 @@
+﻿Esta es una tarea de asociación. Verá un objeto en el centro de
+la pantalla y una palabra en la parte inferior de la pantalla. 
+La palabra se referirá a la FORMA o COLOR. La palabra en la parte
+inferior de la pantalla le indicará de qué forma asociar el objeto
+ubicado en el centro con uno de los objetos de las esquinas. 
+
+
+
+
+
+
+Al momento de hacer la asociación según el COLOR, presione el 
+botón IZQUIERDO para ROJO y el botón DERECHO para AZUL. 
+
+Al momento de hacer la asociación según la FORMA, presione el
+botón IZQUIERDO para TRIÁNGULO y el botón DERECHO para RECTÁNGULO.

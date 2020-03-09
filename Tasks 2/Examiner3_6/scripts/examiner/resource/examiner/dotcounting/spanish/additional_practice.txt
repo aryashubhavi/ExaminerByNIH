@@ -1,0 +1,17 @@
+﻿Ahora debe contar los CÍRCULOS AZULES que aparecen en una 
+pantalla y después en otra pantalla. 
+
+Comience a contar los círculos azules en voz alta apenas
+aparezcan en cada pantalla. 
+
+Recuerde repetir el total final en voz alta una vez que 
+haya terminado de contar. 
+
+Después de cierta cantidad de pantallas, verá signos de
+interrogación. Esto le ayudará a repetir las cantidades 
+totales finales que haya contado en cada pantalla 
+en el orden correcto. 
+
+Primero practicaremos un poco. 
+
+Presione la BARRA ESPACIADORA para comenzar.

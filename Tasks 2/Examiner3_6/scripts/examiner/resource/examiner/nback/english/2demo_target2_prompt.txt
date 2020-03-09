@@ -1,0 +1,4 @@
+﻿Also remember the location of
+this square so you can compare
+it to the location of the 
+square after the next one.

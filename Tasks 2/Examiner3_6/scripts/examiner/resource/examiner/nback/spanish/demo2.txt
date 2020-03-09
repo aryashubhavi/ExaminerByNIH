@@ -1,0 +1,13 @@
+﻿Si el cuadrado corresponde con la ubicación del cuadrado 
+anterior, presione el botón IZQUIERDO para SÍ.
+
+Si el cuadrado no corresponde con la ubicación del cuadrado 
+anterior, presione el botón DERECHO para NO. 
+
+Entre cada cuadrado aparecerá un número en la mitad 
+de la pantalla. Diga ese número en voz alta.
+
+Primero haremos algunas pruebas de práctica.
+
+Presione la BARRA ESPACIADORA para comenzar.
+

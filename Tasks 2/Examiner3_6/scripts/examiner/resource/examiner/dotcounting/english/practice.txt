@@ -1,0 +1,9 @@
+﻿You will be shown a series of screens containing blue circles, 
+green circles, and blue squares.
+
+Please count and remember the number of BLUE CIRCLES 
+you see on each screen.  
+
+Count the BLUE CIRCLES out loud, one at a time, 
+and then repeat the final total out loud immediately.
+This will indicate to the examiner that you have finished counting. 

@@ -1,0 +1,27 @@
+
+
+Ha completado la prueba de práctica. 
+Hagamos otra prueba de práctica.
+
+La pantalla mostrará una serie de flechas que señalan 
+hacia la izquierda o hacia la derecha. Por ejemplo:
+
+
+
+
+O bien 	
+
+
+						
+Presione el botón DERECHO si la flecha CENTRAL 
+señala hacia la derecha.
+Presione el botón IZQUIERDO si la flecha CENTRAL 
+señala hacia la izquierda.
+
+Intente responder tan rápido y preciso como pueda.
+			
+Intente mantener su atención concentrada en la cruz (“+”) 
+en el centro de la pantalla.
+
+Presione la BARRA ESPACIADORA para comenzar.	
+

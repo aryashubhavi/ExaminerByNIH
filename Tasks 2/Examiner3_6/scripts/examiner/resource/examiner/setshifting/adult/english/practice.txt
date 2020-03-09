@@ -1,0 +1,16 @@
+﻿This is a matching task. 
+You will see an object in the center of the screen, and a word
+at the bottom of the screen.  The word will be SHAPE or COLOR. 
+The word at the bottom of the screen will tell you how to match
+the object in the center to one of the objects in the corners.  
+
+
+
+
+
+
+When you have to match by COLOR, you should push the
+LEFT button for RED and the RIGHT button for BLUE.  
+
+When you have to match by SHAPE, you should push the 
+LEFT button for TRIANGLE and the RIGHT button for RECTANGLE.
