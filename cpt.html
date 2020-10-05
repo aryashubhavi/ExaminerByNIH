@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src ="jspsych-6.1.0/jspsych.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+	<link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+	
+</head>
+
+<body>
+	
+</body>
+
+<script>
+
+    var timeline =[];
+	var practice_instructions = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You will be presented with different objects on the screen.<br>If this 5-POINTED STAR is presented on the screen,<br>press the left arrow key.<br>If any other shape is presented, do not press any key.<br><br><img src="resource/examiner/cpt/a/target.bmp"></img><br><br>Respond as quickly as you can without making mistakes.<br>If you do make a mistake just keep going.<br><br>We will start with some practice trials.<br>Press the SPACEBAR to begin.<br></p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions);
+
+    var stimuli_images =[
+    {stimulus: 'resource/examiner/cpt/a/nt1.bmp', data: {test_part:'test', correct_response: null,}},
+    {stimulus: 'resource/examiner/cpt/a/nt2.bmp',data: {test_part:'test', correct_response: null}},
+    {stimulus: 'resource/examiner/cpt/a/nt3.bmp',data: {test_part:'test', correct_response: null}},
+    {stimulus: 'resource/examiner/cpt/a/nt4.bmp',data: {test_part:'test', correct_response: null}},
+    {stimulus: 'resource/examiner/cpt/a/nt5.bmp',data: {test_part:'test', correct_response: null}},
+    {stimulus: 'resource/examiner/cpt/a/target.bmp',data: {test_part:'test', correct_response: 37}},
+    ];
+
+    var fixation = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/cpt/Solid_black.png',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 300,
+        data: {test_part: 'fixation'}
+    }
+
+    var test = {
+    	type: "image-keyboard-response",
+    	stimulus: jsPsych.timelineVariable('stimulus'),
+    	choices:jsPsych.ALL_KEYS,//left or right
+        trial_duration: 2000,
+        //stimulus_duration: null,
+        data: jsPsych.timelineVariable('data'),
+        on_finish: function(data){
+            if (data.key_press==data.correct_response){
+                alert("Correct Response")
+                //toastr.success('Correct');
+            }
+            else{
+                alert("Incorrect Response")
+                //toastr.error('Incorrect');
+            }
+        }
+        // can't give feedback because its timed
+    }
+
+    var stimuli_images_r1 = jsPsych.randomization.sampleWithReplacement(stimuli_images, 30,[6,6,6,6,6,24])
+    var practice_procedure_1 = {
+    	timeline: [fixation,test],
+    	timeline_variables: stimuli_images_r1,
+    	//randomize_order: true,
+        //repetitions: 5
+    }
+
+    timeline.push(practice_procedure_1);
+
+    var practice_instructions_2 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You have completed the practice trial.<br>Let us do another practice trial.<br><br>The instructions are the same.<br>You will be presented with different objects on the screen.<br>If this 5-POINTED STAR is presented on the screen,<br>press the left arrow key.<br>If any other shape is presented, do not press any key.<br><br><img src="resource/examiner/cpt/a/target.bmp"></img><br><br>Respond as quickly as you can without making mistakes.<br>If you do make a mistake just keep going.<br><br>We will start with some practice trials.<br>Press the SPACEBAR to begin.<br></p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_2);
+
+    var stimuli_images_r2 = jsPsych.randomization.sampleWithReplacement(stimuli_images, 30,[6,6,6,6,6,24])
+
+    var practice_procedure_2 = {
+        timeline: [fixation,test],
+        timeline_variables: stimuli_images_r2,
+        //randomize_order: true,
+       // repetitions: 5
+    }
+
+    timeline.push(practice_procedure_2);
+
+
+    var final_instructions = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You have completed the practice trial.<br> Let us move on to the task.<br><br>The instructions are the same.<br>You will be presented with different shapes on the screen.<br>If the 5-POINTED STAR is presented on the screen,<br> press the left arrow key.<br> If any other shape is presented, do not press any key.<br><img src="resource/examiner/cpt/a/target.bmp"></img><br>Respond as quickly as you can without making mistakes.<br>If you do make a mistake just keep going.<br><br>Press the SPACEBAR when you are ready to begin.<br></p>',
+        choices: [32]
+
+    }
+
+    timeline.push(final_instructions);
+
+    var stimuli_images_r3 = jsPsych.randomization.sampleWithReplacement(stimuli_images, 60,[12,12,12,12,12,48])
+
+    var test_main = {
+	type: "image-keyboard-response",
+	stimulus: jsPsych.timelineVariable('stimulus'),
+	choices:jsPsych.ALL_KEYS,//left or right
+    trial_duration: 2000,
+    //stimulus_duration: null,
+    data: jsPsych.timelineVariable('data')
+}
+
+    var test_procedure = {
+    	timeline: [fixation,test_main],
+    	timeline_variables: stimuli_images_r3,
+    	//randomize_order: true,
+        //repetitions: 12
+    }
+
+    timeline.push(test_procedure);
+
+    var final_message = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>The task is complete.</p>',
+        choices: jsPsych.NO_KEYS,
+
+    }
+
+    timeline.push(final_message);
+
+
+    jsPsych.init({
+        timeline: timeline
+    });
+
+     //toastr
+    toastr.options ={
+          "closeButton": false,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": false,
+          "positionClass": "toast-top-center",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "10",
+          "hideDuration": "800",
+          "timeOut": "800",
+          "extendedTimeOut": "800",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+    }
+
+
+</script>
+
+</html>

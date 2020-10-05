@@ -1,3 +1,0 @@
-task_name,task_version,task_versionDate,task_form,task_ageCohort,task_language,site_id,subject_id,session_num,session_date,session_start,initials,machine_id,response_device,block_name,trial_congruent,trial_arrows,trial_upDown,trial_corrResp,trial_fixation,resp_value,resp_corr,resp_rt,task_time
-Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,11/22/2019,22:20,SA,Machine_ID,keyboard,firstPracticeBlock,1,lllll,down,left,1.367,left,1,2.1402941039998113,12.704251432000092
-Flanker,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,11/22/2019,22:20,SA,Machine_ID,keyboard,firstPracticeBlock,0,rrlrr,up,left,2.01,right,0,1.0484488789991158,18.20886976499969

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src ="jspsych-6.1.0/jspsych.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-image-audio-response.js"></script>
+	<link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+	
+</head>
+
+<body>
+	
+</body>
+
+<script>
+
+	const saveFunction = function(data) {
+        return new Promise(
+            function(resolve) {
+                const blob = new Blob(data, { type: 'audio/webm' });
+                let url = URL.createObjectURL(blob);
+                resolve(url);
+            });
+    };
+
+    var timeline =[];
+	var practice_instructions_one = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You will be shown a series of screens containing blue circles, <br> green circles, and blue squares. <br><br> Please count and remember the number of BLUE CIRCLES <br> you see on each screen.<br><br> Count the BLUE CIRCLES out loud, one at a time,<br> and then repeat the final total out loud immediately. <br><br> This This will indicate to the examiner that you have finished counting. <br><br> Press SPACEBAR to continue.<br></p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_one);
+
+    var prac_img_one = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac1_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_one);
+
+    // var question_one = {
+    //     type: 'html-keyboard-response',
+    //     stimulus: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img></p>',
+    //     choices: [32],
+
+    // }
+
+    var question_one = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img></p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(question_one);
+
+    var practice_instructions_two = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Now, you will count the BLUE CIRCLES on one screen,<br> and then on another screen. <br><br> Please begin counting the blue circles out loud as <br> soon as they appear on each screen. <br><br> Remember to repeat the final total out loud once <br> you have finished counting. <br><br> After a number of screens you will see question marks. <br><br> This will be your cue to repeat the final totals you <br> counted on each screen in the correct order. <br><br> Let"s do some practice first. Press the SPACEBAR to begin.<br></p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_two);
+
+    var prac_img_two_one = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac2_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_two_one);
+
+    var prac_img_two_two = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac2_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_two_two);
+
+    var question_two = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img></p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(question_two);
+
+    var prac_img_three_one = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac3_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_three_one);
+
+    var prac_img_three_two = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac3_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_three_two);
+
+    var prac_img_three_three = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/prac3_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(prac_img_three_three);
+
+    var question_three = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img></p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(question_three);
+
+    var main_instructions = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You have completed the practice trials.<br><br> Let"s continue with the task. The instructions are the same. <br><br> Count and remember the number of BLUE CIRCLES you see on each screen.<br><br> Count the BLUE CIRCLES out loud, one at a time, and then repeat <br> the final total out loud. Repeat the final numbers you counted <br> when you see the question marks appear on the screen. <br><br> Press the SPACEBAR when you are ready to begin. <br> </p>',
+        choices: [32],
+
+    }
+
+    timeline.push(main_instructions);
+
+    var a_img_2_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots2_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_2_1);
+
+    var a_img_2_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots2_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_2_2);
+
+    var m_question_two = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_two);
+
+    var a_img_3_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots3_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_3_1);
+
+    var a_img_3_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots3_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_3_2);
+
+    var a_img_3_3 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots3_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_3_3);
+
+    var m_question_three = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_three);
+
+    var a_img_4_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots4_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_4_1);
+
+    var a_img_4_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots4_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_4_2);
+
+    var a_img_4_3 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots4_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_4_3);
+
+    var a_img_4_4 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots4_4.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_4_4);
+
+
+    var m_question_four = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_four);
+
+    var a_img_5_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots5_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_5_1);
+
+    var a_img_5_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots5_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_5_2);
+
+    var a_img_5_3 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots5_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_5_3);
+
+    var a_img_5_4 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots5_4.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_5_4);
+
+    var a_img_5_5 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots5_5.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_5_5);
+
+    var m_question_five = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>   </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_five);
+
+    var a_img_6_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_1);
+
+    var a_img_6_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_2);
+
+    var a_img_6_3 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_3);
+
+    var a_img_6_4 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_4.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_4);
+
+    var a_img_6_5 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_5.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_5);
+
+    var a_img_6_6 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots6_6.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_6_6);
+
+    var m_question_six = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_six);
+
+    var a_img_7_1 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_1.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_1);
+
+    var a_img_7_2 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_2.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_2);
+
+    var a_img_7_3 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_3.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_3);
+
+    var a_img_7_4 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_4.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_4);
+
+    var a_img_7_5 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_5.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_5);
+
+    var a_img_7_6 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_6.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_6);
+
+    var a_img_7_7 = {
+        type: 'image-keyboard-response',
+        stimulus: 'resource/examiner/dotcounting/a/dots7_7.jpg',
+        choices: [32],
+    }
+
+    timeline.push(a_img_7_7);
+
+    var m_question_seven = {
+        type: 'image-audio-response',
+        stimulus: "img/line.jpeg",
+        postprocessing: saveFunction,
+        prompt: '<p>How many BLUE CIRCLES did you count? <br> <img src="resource/examiner/dotcounting/question_mark.jpg"></img>  <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> <img src="resource/examiner/dotcounting/question_mark.jpg"></img> </p>',
+        allowPlayback: true,
+
+    }
+
+    timeline.push(m_question_seven);
+
+    var final_message = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>The task is complete.</p>',
+        choices: jsPsych.NO_KEYS,
+
+    }
+
+    timeline.push(final_message);
+
+
+    jsPsych.init({
+        timeline: timeline
+    });
+
+</script>
+
+</html>

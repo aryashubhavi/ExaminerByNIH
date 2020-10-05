@@ -1,9 +1,0 @@
-task_name,task_version,task_versionDate,task_form,task_ageCohort,task_language,site_id,subject_id,session_num,session_date,session_start,initials,machine_id,response_device,block_name,trial_stimulus,trial_extra_responses,resp_value,resp_corr,resp_rt,task_time
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,6.477358212985564
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,8.727852348005399
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,10.978230214997893
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,13.228582454990828
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,nontarget2,none,none,1,0,15.479482766997535
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,17.73039279098157
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,nontarget1,none,none,1,0,19.98111820500344
-CPT,3.2.0.1,12/30/2011,a,Adult,English,Site_ID,12,12,01/02/2020,23:27,sa,Machine_ID,none,firstPracticeBlock,target,none,none,0,0,22.231809343007626

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src ="jspsych-6.1.0/jspsych.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+	<link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+	
+</head>
+
+<body>
+	
+</body>
+
+<script>
+
+    var timeline =[];
+	var practice_instructions_1 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>You will see a series of white squares appear on the screen.\
+        <br>Remember the location of each square when it appears.\
+        <br>You will compare it to the location of the next square you see.\
+        <br>Press the SPACEBAR to continue.</p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_1);
+
+    var practice_instructions_2 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>If a square matches the location of the previous square, \
+        <br>Press the LEFT button for YES.<br><br>\
+        If a square does not match the location of the previous square,<br>\
+        Press the RIGHT button for NO.<br><br>\
+        In between each square, a number will appear in the<br> \
+        middle of the screen. Say that number out loud.<br><br>\
+        We will try some practice trials first.<br><br>\
+        Press the SPACEBAR to begin.</p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_2);
+
+	var practice_instructions_3 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p> <img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-200px);"</img> <br><br><br>Remember the location of this square,\
+        <br>so you can compare it to the location \
+        <br>of the next square you see</p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+
+    timeline.push(practice_instructions_3);
+
+    var practice_instructions_4 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Say this number out loud <br><br><h1 style="text-align: center; color: blue;">3</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+
+    timeline.push(practice_instructions_4);
+
+
+    var practice_ins_5 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==37){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_5);
+
+    var practice_ins_6 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Say this number out loud <br><br><h1 style="text-align: center; color: blue;">8</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_6);
+
+    var practice_ins_7 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-300px);"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_7);
+
+    timeline.push(practice_instructions_4);
+
+    var practice_ins_8 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-300px);"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==37){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_8);
+
+    var practice_ins_9 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Say this number out loud <br><br><h1 style="text-align: center; color: blue;">6</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_9);
+
+    var practice_ins_10 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_10);
+
+    timeline.push(practice_ins_9);
+
+    var practice_ins_11 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-200px);"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_11);
+
+    var practice_ins_12 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">1</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_12);
+
+    var practice_ins_13 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-200px);"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==37){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_13);
+
+    var practice_ins_14 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">8</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_14);
+
+    var practice_ins_15 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_15);
+
+    var practice_ins_16 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">7</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_16);
+
+    var practice_ins_17 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px); transform: translateX(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_17);
+
+    var practice_ins_18 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">5</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_18);
+
+    var practice_ins_19 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-400px)"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==39){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_19);
+
+    var practice_ins_18 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">9</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 3000
+
+    }
+    timeline.push(practice_ins_18);
+
+    var practice_ins_19 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-400px)"</img> <br><br><br><h1 style="text-align: center; color: blue;">Is this location the same\
+        	<br>as the one just before?<br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		on_finish: function(data){
+            if (data.key_press==37){
+                toastr.success('Correct');
+            }
+            else{
+                toastr.error('Incorrect');
+            }
+        }
+
+    }
+    timeline.push(practice_ins_19);
+
+    var practice_instructions_20 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Let us try a few more practice squares.\
+        <br>You will not receive directions or feedback for this round.\
+        <br>Each square will appear for a shorter time.\
+        <br>Please respond as quickly as possible without making mistakes.\
+        <br>Press the SPACEBAR to begin.</p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_20);
+
+    var practice_instructions_21 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(500px);"</img></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_21);
+
+    var practice_instructions_22 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">3</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_22);
+
+    var practice_ins_23 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(500px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_23);
+
+    var practice_instructions_24 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">5</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_24);
+
+    var practice_ins_25 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(500px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_25);
+
+    var practice_instructions_26 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">7</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_26);
+
+    var practice_ins_27 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(500px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_27);
+
+    var practice_instructions_28 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">1</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_28);
+
+    var practice_ins_29 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_29);
+
+    var practice_instructions_30 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">6</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_30);
+
+    var practice_ins_31 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_31);
+
+    var practice_instructions_32 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">7</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_32);
+
+    var practice_ins_33 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-250px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_33);
+
+    var practice_instructions_34 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">3</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_34);
+
+    var practice_ins_35 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(500px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_35);
+
+    var practice_instructions_36 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">8</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_36);
+
+    var practice_ins_37 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(500px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_37);
+
+    timeline.push(practice_instructions_28);
+
+    var practice_ins_38 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-250px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_38);
+
+    var practice_instructions_39 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">4</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_39);
+
+    var practice_ins_40 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-250px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_40);
+
+    var practice_instructions_41 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>It is now time to begin the task.\
+        <br>Please respond as quickly as possible without making mistakes.\
+        <br>Press the SPACEBAR when you are ready to begin. </p>',
+        choices: [32],
+
+    }
+
+    timeline.push(practice_instructions_41);
+
+    var practice_instructions_42 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-200px);"</img></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_42);
+
+    var practice_instructions_43 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">3</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_43);
+
+
+    var practice_ins_44 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_44);
+
+    timeline.push(practice_instructions_43);
+
+    var practice_ins_45 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_45);
+
+    var practice_instructions_46 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">8</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+
+    timeline.push(practice_instructions_46);
+
+    var practice_ins_47 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_47);
+
+    var practice_ins_48 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">6</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_48);
+
+    var practice_ins_49 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_49);
+
+    var practice_ins_50 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">4</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_50);
+
+    var practice_ins_51 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-200px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_51);
+
+    var practice_ins_52 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">1</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_52);
+
+    var practice_ins_53 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-200px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_53);
+
+    var practice_ins_54 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">8</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_54);
+
+    var practice_ins_55 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_55);
+
+    var practice_ins_56 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">7</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_56);
+
+    var practice_ins_57 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateX(-150px);"</img> <br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_57);
+
+    var practice_ins_58 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">5</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_58);
+
+    var practice_ins_59 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==39){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_59);
+
+    var practice_ins_60 = {
+        type: 'html-keyboard-response',
+        stimulus: '<p><h1 style="text-align: center; color: blue;">9</h1></p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(practice_ins_60);
+
+    var practice_ins_61 = {
+    	type: 'html-keyboard-response',
+        stimulus: '<p><img src="resource/examiner/nback/whitesquare.bmp" style="transform: translateY(400px);"</img> <br><br><br><h1 style="text-align: center; color: blue;"><br><br>\
+        	If YES, press the LEFT KEY.\
+			<br>If NO, press the RIGHT KEY. </h1></p>',
+		choices: [37, 39],
+		// on_finish: function(data){
+  //           if (data.key_press==37){
+  //               toastr.success('Correct');
+  //           }
+  //           else{
+  //               toastr.error('Incorrect');
+  //           }
+  //       }
+
+    }
+    timeline.push(practice_ins_61);
+
+    var final_message = {
+        type: 'html-keyboard-response',
+        stimulus: '<p> The task is complete.</p>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+
+    }
+    timeline.push(final_message);
+
+
+
+
+    jsPsych.init({
+        timeline: timeline
+    });
+
+        //toastr
+    toastr.options ={
+          "closeButton": false,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": false,
+          "positionClass": "toast-top-center",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "1000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+    }
+
+
+</script>
+
+</html>
